@@ -1,0 +1,59 @@
+#include<iostream>
+int forLoop(int);
+int whileLoop(int);
+int doWhileLoop(int);
+using namespace std;
+int main(){
+	int i;
+	cout<<"From what loop do you want to print  numbers ( 1 = for loop, 2 = while loop, 3 = do while loop)  : ";
+	cin>>i;
+	switch(i){
+		case 1:
+			{
+				forLoop(i);
+				cout<<endl;
+				break;
+			}
+		case 2:
+			{
+				whileLoop(i);
+				cout<<endl;
+				break;
+			}
+		case 3:
+			{
+				doWhileLoop(i);
+				cout<<endl;
+				break;
+			}	
+	}
+}
+int forLoop(int a){
+	cout<<"The even numbers between 1 and 100 with for loop are : "<<endl;
+	a=0;
+	for(a;a<=100;a++){
+		if(a%2==0){
+			cout<<a<<"\t";
+		}
+	}
+}
+int whileLoop(int b){
+	cout<<"The even numbers between 1 and 100 with while loop are : "<<endl;
+	b=0;
+	while(b<=100){
+		if(b%2==0){
+			cout<<b<<"\t";
+		}
+		b++;
+	}
+}
+int doWhileLoop(int c){
+	cout<<"\nThe even numbers between 1 and 100 with do while loop are : "<<endl;
+	c=0;
+	do{
+		if(c%2==0){
+			cout<<c<<"\t";
+		}
+		c++;
+	}while(c<=100);
+}
